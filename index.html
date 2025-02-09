@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 引入 Academicons (学术图标) -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- 引入 Font Awesome (品牌图标等) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Zian ZHAI (翟梓安) - Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 内嵌CSS，方便直接查看效果，如需更丰富功能可考虑Bootstrap等框架 -->
+  <style>
+    /* 全局基础样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+    ul {
+      list-style: none;
+      margin-left: 1.5rem; /* 列表略缩进，阅读更美观 */
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* 顶部导航栏 */
+    header {
+      background-color: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      position: sticky; /* 页面滚动时，导航固定在顶部 */
+      top: 0;
+      z-index: 10;
+    }
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      height: 60px;
+    }
+    .navbar ul {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .navbar li {
+      display: inline-block;
+    }
+    .navbar a {
+      font-weight: 500;
+      color: #333;
+    }
+
+    /* 主容器：包含左侧栏和右侧内容 */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      gap: 2rem;
+    }
+
+    /* 左侧个人信息栏 */
+    .sidebar {
+      flex: 0 0 280px; /* 固定宽度，可按需修改 */
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;    /* 保证头像不会变形 */
+      border-radius: 50%;   /* 圆形头像 */
+      margin-bottom: 1rem;
+    }
+    .sidebar h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    .sidebar .title {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 1rem;
+    }
+    .sidebar .info {
+      margin-top: 1.5rem;
+      text-align: left;
+    }
+    .sidebar .info p {
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+    }
+    .icon {
+      margin-right: 0.3rem;
+      color: #555;
+    }
+
+    /* 右侧主体内容 */
+    .main-content {
+      flex: 1;    /* 占满剩余空间 */
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem; /* 分区之间的间距 */
+    }
+    .section {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .section h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #efefef;
+      padding-bottom: 0.5rem;
+    }
+    .section p {
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .section li {
+      line-height: 1.6;
+    }
+    .section li strong {
+      font-weight: 600;
+    }
+
+    /* 底部留白或页脚（可选） */
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* 在屏幕较窄时，sidebar自动放在上面 */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Homepage</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#honors">Honors</a></li>
+        <li><a href="#educations">Education</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 主体：左侧栏 + 右侧内容 -->
+  <div class="container">
+
+    <!-- 左侧栏：个人信息 -->
+    <aside class="sidebar">
+      <!-- 头像，需要在本地放一张图片命名 your_photo.jpg 或修改路径 -->
+      <img class="profile-photo" src="images/selfie.jpg" alt="Profile Photo">
+
+      <!-- 姓名和头衔 -->
+      <h2>Zian Zhai</h2>
+      <div class="title">Ph.D. Candidate<br>School of Computer Science and Engineering, University of New South Wales (UNSW)</div>
+
+      <!-- 其他个人信息 -->
+      <div class="info">
+	<p>
+        <i class="fas fa-map-marker-alt" style="margin-right: 4px;"></i>
+	Sydney, Australia
+	</p>
+
+        <p>
+	<i class="fas fa-envelope" style="margin-right: 4px;"></i>
+	<a href="zian.zhai@unsw.edu.au">Email</a>
+	</p>
+        <p><i class="fab fa-github" style="margin-right: 4px;"></i> <a href="https://github.com/AzusaFighting" target="_blank">Github</a></p>
+        <p><i class="ai ai-google-scholar-square" style="margin-right: 4px;"></i> <a href="#" target="_blank">Google Scholar</a></p>
+	<p>
+    	<i class="fab fa-linkedin" style="margin-right:5px; color:black;"></i>
+    	<a href="https://www.linkedin.com/in/zian-zhai-543b0b236/" target="_blank">LinkedIn</a>
+  	</p>
+      </div>
+    </aside>
+
+    <!-- 右侧主要内容 -->
+    <main class="main-content">
+
+      <!-- About Me -->
+      <section class="section" id="home">
+        <h3>About Me</h3>
+        <p>
+        I am currently a second-year Ph.D. candidate in the Data and Knowledge Research Group 
+	<a href="https://unswdb.github.io/" target="_blank" style="text-decoration: underline;">
+    		Data and Knowledge Research Group (DKR)
+  	</a>,
+ 	School of Computer Science and Engineering, University of New South Wales (UNSW). I am under the joint supervision of Dr. 
+	<a href="https://scholar.google.com/citations?hl=zh-CN&user=TwbvM1oAAAAJ" target="_blank" style="text-decoration: underline;">
+    		Xiaoyang Wang
+  	</a> and Prof.
+	<a href="https://scholar.google.com.au/citations?user=yHTJo1kAAAAJ&hl=en" target="_blank" style="text-decoration: underline;">
+    		Wenjie Zhang
+  	</a>.
+          My research interests include Graph Data Reasoning and LLM4Graphs.
+        </p>
+        <p>
+          Prior to that, I obtained my Master's degree from University of Southampton (UoS) in 2023, supervised by Prof.
+	<a href="https://scholar.google.co.uk/citations?user=mJjmcu0AAAAJ&hl=en" target="_blank" style="text-decoration: underline;">
+    		Timothy J Norman
+  	</a>. 
+	  Before that, I earned my Bachelor's degree from Sun Yat-Sen University (SYSU) in 2020.
+        </p>
+      </section>
+
+      <!-- News -->
+	<section class="section" id="news">
+        <h3>📢 News</h3>
+        <ul>
+	  <li>One paper is under review.</li>
+	<!--
+          <li>2025.01: 🎉🎉 One paper was accepted by ICDE 2025.</li>
+          <li>2024.08: 🎉🎉 One paper was accepted by TKDE 2024.</li>
+          <li>2024.04: 🎉🎉 One paper was accepted by IJCAI 2024.</li>
+	-->
+        </ul>
+      </section>
+
+      <!-- Publications -->
+      <section class="section" id="publications">
+        <h3>📖 Publications</h3>
+        <ul>
+	  <!--
+          <li>
+            <strong>Your Name</strong>, XXX, XXX, and XXX. 
+            <em>Efficient Dynamic Attributed Graph Generation</em>.  
+            <br>IEEE International Conference on Data Engineering (ICDE), 2025 
+            [<a href="#" target="_blank">pdf</a>] [<a href="#" target="_blank">code</a>]
+          </li>
+          <li>
+            <strong>Your Name</strong>, XXX, and XXX. 
+            <em>Risk-adaptive Deep Reinforcement Learning for Vulnerable Nodes Detection</em>.  
+            <br>IEEE Transactions on Knowledge and Data Engineering (TKDE), 2024 
+            [<a href="#" target="_blank">pdf</a>] [<a href="#" target="_blank">code</a>]
+          </li>
+	  -->
+	  <li>
+	    <strong>One paper is under review.</strong>
+	  </li>
+        </ul>
+      </section>
+      <!-- Honors -->
+      <section class="section" id="honors">
+        <h3>🏅 Honors</h3>
+        <ul>
+          <li>Dean’s List of Research Dissertations (University of Southampton), 2022</li>
+	  <li>Transportation Funds (Sun Yat-sen University), 2018</li>
+	  <li>Excellent Student Award (Sun Yat-sen University) 2018</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section class="section" id="educations">
+        <h3>🎓 Education</h3>
+        <ul>
+          <li><strong>2023.09 - present</strong>: Ph.D. Candidate, University of New South Wales.</li>
+          <li><strong>2021.09 - 2022.12</strong>: M. Sc., University of Southampton.</li>
+	  <li><strong>2016.08 - 2020.07</strong>: B.Eng., Sun Yat-Sen University.</li>
+        </ul>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- 底部留白或页脚（可选） -->
+  <footer>
+    © 2025 Zian Zhai | Last updated on 2025-02-09
+  </footer>
+
+</body>
+</html>
